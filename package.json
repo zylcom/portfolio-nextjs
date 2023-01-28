@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@next/font": "13.1.6",
@@ -22,7 +22,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "postcss": "^8.4.21",
+    "prettier": "2.8.3",
     "tailwindcss": "^3.2.4"
   }
 }
