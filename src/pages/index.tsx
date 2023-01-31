@@ -1,4 +1,5 @@
 import Head from "next/head";
+import About from "@/components/about";
 import Header from "@/components/header";
 
 export default function Home() {
@@ -15,7 +16,10 @@ export default function Home() {
       </Head>
 
       <Header />
-      <main>Home Page</main>
+
+      <main>
+        <About />
+      </main>
     </>
   );
 }
