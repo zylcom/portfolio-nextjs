@@ -1,6 +1,7 @@
 import Head from "next/head";
 import About from "@/components/about";
 import Header from "@/components/header";
+import Project from "@/components/project";
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
 
       <Header />
 
-      <main>
+      <main className="bg-zhen-zhu-bai-pearl">
         <About />
+        <Project />
       </main>
     </>
   );
