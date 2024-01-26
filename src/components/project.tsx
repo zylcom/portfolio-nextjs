@@ -1,56 +1,30 @@
-import { useRef } from "react";
+import { useState } from "react";
 import ProjectItem from "./projectItem";
+import ModalGallery from "./modalGallery";
+import { projectList } from "@/utils/data";
+
+export type Modal = { active: boolean; index: number };
 
 export default function Project() {
-  const dummyProjects = useRef([
-    {
-      id: 1,
-      nameProject: "Project 1",
-      projectImageUrl: "https://picsum.photos/600/400.webp?random=1",
-      slug: "project-1",
-    },
-    {
-      id: 2,
-      nameProject: "Project 2",
-      projectImageUrl: "https://picsum.photos/600/400.webp?random=2",
-      slug: "project-2",
-    },
-    {
-      id: 3,
-      nameProject: "Project 3",
-      projectImageUrl: "https://picsum.photos/600/400.webp?random=3",
-      slug: "project-3",
-    },
-    {
-      id: 4,
-      nameProject: "Project 4",
-      projectImageUrl: "https://picsum.photos/600/400.webp?random=4",
-      slug: "project-4",
-    },
-    {
-      id: 5,
-      nameProject: "Project 5",
-      projectImageUrl: "https://picsum.photos/600/400.webp?random=5",
-      slug: "project-5",
-    },
-  ]);
+  const projects = projectList;
+  const [modal, setModal] = useState<Modal>({ active: false, index: 0 });
 
   return (
-    <div>
-      <div>
-        <h2 className="text-center text-lg">My Work</h2>
+    <div id="work" className="pt-20 px-4 md:px-8">
+      <h2 className="mb-12 text-center text-3xl">My Work</h2>
 
-        <div className="mt-12 px-4 last:mb-2 md:px-8 [&>div]:border-b [&>div:first-child]:border-t">
-          {dummyProjects.current.map((project) => (
-            <ProjectItem
-              projectName={project.nameProject}
-              imageUrl={project.projectImageUrl}
-              slug={project.slug}
-              key={project.id}
-            />
-          ))}
-        </div>
-      </div>
+      {projects.map((project, index) => (
+        <ProjectItem
+          index={index}
+          projectName={project.name}
+          imageUrl={project.coverImageUrl}
+          slug={project.slug}
+          setModal={setModal}
+          key={project.id}
+        />
+      ))}
+
+      <ModalGallery modal={modal} projects={projects} />
     </div>
   );
 }
