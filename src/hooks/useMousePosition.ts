@@ -20,6 +20,9 @@ export function useMousePosition(
   }
 
   useEffect(() => {
+    mousePosition.x.set(window.innerWidth / 2 + xOffset);
+    mousePosition.y.set(window.innerHeight / 2 + yOffset);
+
     window.addEventListener("mousemove", updateMousePosition);
 
     return () => {

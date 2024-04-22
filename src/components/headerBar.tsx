@@ -1,7 +1,20 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useContext } from "react";
 import ActionButton from "./actionButton";
 import { HoverContext } from "@/context/hoverContext";
+
+const fadeInVariant = {
+  initial: {
+    y: 30,
+    opacity: 0,
+  },
+  fade: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.7 },
+  },
+};
 
 export default function HeaderBar() {
   const { setHover } = useContext(HoverContext);
@@ -16,25 +29,51 @@ export default function HeaderBar() {
         }
         onMouseLeave={() => setHover({ isHovered: false, message: "" })}
       >
-        <span className="block ml-3">Sabilillah</span>
+        <motion.span
+          className="block ml-3"
+          initial="initial"
+          animate="fade"
+          variants={fadeInVariant}
+        >
+          Sabilillah
+        </motion.span>
       </Link>
 
-      <span className="order-2">
+      <motion.span
+        className="order-2"
+        initial="initial"
+        animate="fade"
+        variants={fadeInVariant}
+      >
         Front-end Developer / <br className="lg:hidden" /> Web Developer
-      </span>
+      </motion.span>
 
-      <span className="order-3 mt-2">Available for hire</span>
+      <motion.span
+        className="order-3 mt-2"
+        initial="initial"
+        animate="fade"
+        variants={fadeInVariant}
+      >
+        Available for hire
+      </motion.span>
 
-      <ActionButton
-        afterContent="after:content-['Let\'s_Talk']"
-        className="text-xs w-[120px]"
-        text="Let's Talk"
-        href="mailto:sabilillah272@gmail.com"
-        onMouseOver={() =>
-          setHover({ isHovered: true, message: "", scaleSize: 4 })
-        }
-        onMouseLeave={() => setHover({ isHovered: false, message: "" })}
-      />
+      <motion.div
+        className="order-4"
+        initial="initial"
+        animate="fade"
+        variants={fadeInVariant}
+      >
+        <ActionButton
+          afterContent="after:content-['Let\'s_Talk']"
+          className="text-xs w-[120px]"
+          text="Let's Talk"
+          href="mailto:sabilillah272@gmail.com"
+          onMouseOver={() =>
+            setHover({ isHovered: true, message: "", scaleSize: 4 })
+          }
+          onMouseLeave={() => setHover({ isHovered: false, message: "" })}
+        />
+      </motion.div>
     </div>
   );
 }
