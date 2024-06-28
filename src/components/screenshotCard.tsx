@@ -23,10 +23,10 @@ export default function ScreenshotCard({ screenshot }: Props) {
 
   return (
     <div
-      className="h-[80svh] min-h-[280px] max-h-[380px] md:max-h-min overflow-hidden relative w-full md:overflow-visible [clip-path:polygon(0_0,0_100%,100%_100%,100%_0)]"
+      className="min-h-[280px] max-h-[380px] md:max-h-min overflow-hidden relative w-full md:overflow-visible [clip-path:polygon(0_0,0_100%,100%_100%,100%_0)]"
       ref={wrapper}
     >
-      <motion.div className="min-h-full relative flex items-center justify-center">
+      <motion.div className="min-h-full relative flex items-center justify-center p-8">
         {isMedium && (
           <Image
             className="h-auto w-7/12 mr-auto relative z-10 ml-20 lg:ml-32"

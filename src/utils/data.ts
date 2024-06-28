@@ -147,6 +147,43 @@ const projectList: ProjectList = [
       "GIT",
     ],
   },
+  {
+    id: 3,
+    name: "Smwaash",
+    demoUrl: "https://smwaash.vercel.app",
+    description: "Cleaning services landing page.",
+    jobDescription:
+      "Slicing UI/UX design to website. Deploy to hosting server.",
+    features: [],
+    repoUrl: "https://github.com/zylcom/smwaash",
+    slug: "smwaash-landing-page",
+    techStack: ["HTML", "Tailwindcss", "Vite", "JavaScript/TypeScript"],
+    typeApp: "Landing Page",
+    workScopes: "Front-end Developer",
+    year: "2024",
+    coverImageUrl:
+      "https://res.cloudinary.com/dk9bcf16t/image/upload/v1719546093/hero-section_tjajr1.png",
+    screenshots: [
+      {
+        devices: {
+          mobile:
+            "https://res.cloudinary.com/dk9bcf16t/image/upload/v1719547818/footer-section-mobile_zuwdvp.png",
+          desktop:
+            "https://res.cloudinary.com/dk9bcf16t/image/upload/v1719547203/upwork-project_t3tv5c.jpg",
+          backgroundId: 818,
+        },
+      },
+      {
+        devices: {
+          mobile:
+            "https://res.cloudinary.com/dk9bcf16t/image/upload/v1719548018/header-section-mobile_o8cwgw.png",
+          desktop:
+            "https://res.cloudinary.com/dk9bcf16t/image/upload/v1719547537/upwork-project-mobile_hdzpgi.jpg",
+          backgroundId: 522,
+        },
+      },
+    ],
+  },
 ];
 
 const certificates: Certificate[] = [
