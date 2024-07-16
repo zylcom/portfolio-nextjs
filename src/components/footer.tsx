@@ -1,67 +1,20 @@
-import React, {
-  MutableRefObject,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import {
-  frame,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useContext, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ActionButton from "./actionButton";
 import { HoverContext } from "@/context/hoverContext";
 import { socials } from "@/utils/data";
-import Image from "next/image";
 
 export default function Footer() {
-  const [lastYPos, setLastYPos] = useState(0);
-  const firstText: MutableRefObject<HTMLAnchorElement | null> = useRef(null);
-  const secondText: MutableRefObject<HTMLAnchorElement | null> = useRef(null);
   const target = useRef(null);
-  const direction = useRef(1);
-  const x = useRef(0);
   const { setHover } = useContext(HoverContext);
-  const { scrollY } = useScroll();
   const { scrollYProgress } = useScroll({
     target,
     offset: ["start end", "start start"],
   });
 
   const translateY = useTransform(scrollYProgress, [0, 1], [50, -50]);
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > lastYPos) {
-      direction.current = -1;
-    } else {
-      direction.current = 1;
-    }
-
-    setLastYPos(latest);
-  });
-
-  useEffect(() => {
-    frame.update(() => {
-      if (x.current <= -100) {
-        x.current = 0;
-      }
-
-      if (x.current > 0) {
-        x.current = -100;
-      }
-
-      if (firstText.current && secondText.current) {
-        firstText.current.style.transform = `translateX(${x.current}%)`;
-        secondText.current.style.transform = `translateX(${x.current}%)`;
-      }
-
-      x.current += 0.2 * direction.current;
-    }, true);
-  }, []);
 
   return (
     <motion.footer className="bg-eerie-black" ref={target}>
@@ -70,43 +23,48 @@ export default function Footer() {
         style={{ y: translateY }}
       >
         <span className="block h-2.5 w-2.5 rounded-full bg-white self-center" />
-        <span className="mt-20 block rounded-full border border-lighthouse px-3 py-2 text-center text-[.56rem] uppercase opacity-50 self-center">
+        <span className="mt-20 block rounded-full border border-lighthouse px-8 py-3 text-center text-xs uppercase self-center">
           Have a project in mind?
         </span>
 
         <motion.div
-          className="relative w-full text-center mt-4 grid grid-cols-[repeat(2,minmax(100vw,max-content))]"
+          className="relative w-full text-center my-16 grid grid-cols-[repeat(2,minmax(100vw,max-content))]"
           onMouseOver={() =>
             setHover({ isHovered: true, message: "Email", scaleSize: 6 })
           }
           onMouseLeave={() => setHover({ isHovered: false, message: "" })}
         >
-          <motion.a
-            href="mailto:sabilillah272@gmail.com"
-            className="text-6xl sm:text-7xl md:text-8xl uppercase whitespace-nowrap block"
-            ref={firstText}
-          >
-            Let&#700;s Talk
-          </motion.a>
+          {[0, 1].map((i) => (
+            <motion.div
+              className="relative flex items-center justify-around animate-marquee-left"
+              key={i}
+            >
+              <Link
+                href="mailto:sabilillah272@gmail.com"
+                className="text-6xl sm:text-7xl md:text-8xl uppercase whitespace-nowrap md:block hidden"
+              >
+                Let&#700;s Talk
+              </Link>
 
-          <motion.a
-            href="mailto:sabilillah272@gmail.com"
-            className="text-6xl sm:text-7xl md:text-8xl uppercase whitespace-nowrap block"
-            ref={secondText}
-          >
-            Let&#700;s Talk
-          </motion.a>
+              <Link
+                href="mailto:sabilillah272@gmail.com"
+                className="text-6xl sm:text-7xl md:text-8xl uppercase whitespace-nowrap block"
+              >
+                Let&#700;s Talk
+              </Link>
+            </motion.div>
+          ))}
         </motion.div>
 
-        <div className="mt-12 w-full md:mt-28 md:flex md:flex-col">
+        <div className="w-full md:mt-28 md:flex md:flex-col">
           <div className="flex mx-10 mb-16 gap-x-4 md:mb-24">
             <div className="w-12 h-12 bg-gray-500 rounded-full shrink-0 overflow-hidden">
               <Image
-                src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1713594612/pasphoto-sabilillah_ncgspp.jpg"
+                src="https://res.cloudinary.com/dk9bcf16t/image/upload/q_auto/pasphoto-sabilillah_ncgspp.jpg"
                 className="-mt-2"
                 alt="Sabilillah"
-                width={500}
-                height={500}
+                width={200}
+                height={200}
                 priority
               />
             </div>
@@ -141,6 +99,7 @@ export default function Footer() {
               <span className="block text-[.6rem] text-nickel">
                 Developed by:
               </span>
+
               <span className="block">Sabilillah</span>
             </div>
 
