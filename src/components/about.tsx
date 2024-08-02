@@ -9,25 +9,16 @@ export default function About() {
       id="about"
       className="pb-20 text-dynamic-black sm:px-[3vw] md:pt-20"
     >
-      <div className="mb-16 grid grid-cols-1 gap-y-6 md:grid-cols-4">
+      <div className="mb-16 grid grid-cols-1 gap-y-6 md:grid-cols-4 mt-6">
         <h2 className="hidden text-sm uppercase md:block md:text-lg">
           About Me
         </h2>
 
-        <p className="order-2 max-w-lg px-3 text-xl md:order-2 md:col-span-2 md:text-4xl lg:text-3xl">
+        <p className="order-2 max-w-lg px-3 text-xl sm:px-0 md:order-2 md:col-span-2 md:text-4xl lg:text-3xl">
           I am passionate about everything that has to do with Programming. I
           enjoy working with enthusiastic people who want to solve problems
           through beautiful design and experiences.
         </p>
-
-        <Image
-          src="/hero-image.png"
-          alt="Sabilillah"
-          width="720"
-          height="720"
-          className="order-1 mx-auto bg-dynamic-black md:order-3 md:rounded-full xl:max-w-xs"
-          priority
-        />
       </div>
 
       <div className="grid grid-cols-1 gap-y-8 px-3 sm:px-0 md:grid-cols-4 lg:grid-cols-5">
