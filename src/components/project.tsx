@@ -10,7 +10,7 @@ export default function Project() {
   const [modal, setModal] = useState<Modal>({ active: false, index: 0 });
 
   return (
-    <div id="work" className="pt-20 px-4 md:px-8">
+    <div id="work" className="px-4 md:px-8">
       <h2 className="mb-12 text-center text-3xl">My Work</h2>
 
       {projects.map((project, index) => (
