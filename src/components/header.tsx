@@ -12,7 +12,7 @@ export default function Header() {
     <header className="flex min-h-[100svh] flex-col justify-between bg-eerie-black px-5 text-lighthouse">
       <HeaderBar />
 
-      <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
+      <section className="grid grid-cols-1 items-center gap-8 p-3 sm:grid-cols-2">
         <Image
           src="/hero-image.png"
           alt=""
@@ -45,7 +45,7 @@ export default function Header() {
         </div>
       </section>
 
-      <section className="flex flex-row-reverse items-center justify-between py-3 sm:flex-row">
+      <section className="flex flex-row-reverse items-center justify-between p-3 sm:flex-row">
         <div className="hidden gap-x-16 sm:flex">
           {socials.map((social, index) => (
             <a
