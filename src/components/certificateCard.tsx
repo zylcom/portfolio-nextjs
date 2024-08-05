@@ -19,13 +19,13 @@ export default function CertificateCard({ certificateDetail }: Props) {
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
-  // scrollYProgress.on("change", (latest) => {
-  //   console.log(latest);
-  // });
+  scrollYProgress.on("change", (latest) => {
+    console.log(latest);
+  });
 
   return (
     <div
-      className="h-[100vh] flex items-center justify-center sticky top-0 px-3"
+      className="h-auto flex items-center justify-center first:mt-32 sm:first:mt-72 sticky top-1/2 px-3 -translate-y-1/2"
       ref={imageContainer}
     >
       <a
@@ -38,7 +38,7 @@ export default function CertificateCard({ certificateDetail }: Props) {
         <motion.img
           src={certificateDetail.imageUrl}
           alt={certificateDetail.title}
-          className="w-full rounded shadow-md max-h-screen md:w-auto"
+          className="w-full rounded shadow-md max-h-screen md:w-auto md:max-w-screen-md"
           width={1000}
           height={800}
           ref={certificateImage}
