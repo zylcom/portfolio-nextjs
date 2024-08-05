@@ -33,10 +33,11 @@ export default function Header() {
           </p>
 
           <ActionButton
-            afterContent="after:content-['Scroll_to_discover']"
-            text="Scroll to discover"
+            afterContent="after:content-['Explore_My_CV']"
+            text="Explore My CV"
             className="text-xs mt-5 border border-lighthouse hidden sm:block uppercase w-fit bg-eerie-black ml-auto"
-            href="#about"
+            href="https://zylcom.github.io/cv-resume"
+            target="_blank"
             onMouseOver={() =>
               setHover({ isHovered: true, message: "", scaleSize: 4 })
             }
