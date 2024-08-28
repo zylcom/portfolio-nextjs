@@ -19,11 +19,11 @@ export default function Header() {
             I am Sabilillah a Front-end Developer from Jakarta, Indonesia. I&apos;m currently is available for hire as a Web Developer.
           </p>
 
-          <CursorHover scaleSize={4}>
+          <CursorHover scaleSize={4} className="ml-auto">
             <ActionButton
               afterContent="after:content-['Explore_My_CV']"
               text="Explore My CV"
-              className="text-xs mt-5 border border-lighthouse hidden sm:block uppercase w-fit bg-eerie-black ml-auto"
+              className="text-xs mt-5 border border-lighthouse hidden sm:block uppercase w-fit bg-eerie-black"
               href="/cv"
             />
           </CursorHover>
