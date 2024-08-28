@@ -98,19 +98,13 @@ export default function Cv() {
             <div>
               <h3 className="text-lg sm:text-xl">Degree: Marketing</h3>
 
-              <div className="text-sm sm:text-base">
-                <span>State Vocational High School 42</span>
-                <span>Jakarta</span>
-              </div>
+              <p className="text-sm sm:text-base">State Vocational High School 42 - Jakarta</p>
             </div>
 
             <div>
               <h3 className="text-lg sm:text-xl">Certification: Responsive Web Design</h3>
 
-              <div className="text-sm sm:text-base">
-                <span>freeCodeCamp</span>
-                <span>Online</span>
-              </div>
+              <p className="text-sm sm:text-base">freeCodeCamp - Online</p>
             </div>
           </div>
         </section>
