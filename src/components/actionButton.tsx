@@ -3,8 +3,8 @@ import Link, { LinkProps } from "next/link";
 interface Props extends LinkProps {
   afterContent: string;
   text: string;
-  className: string | undefined;
-  target: React.HTMLAttributeAnchorTarget | undefined;
+  className?: string | undefined;
+  target?: React.HTMLAttributeAnchorTarget | undefined;
 }
 
 export default function ActionButton({ afterContent, className, target, text, ...props }: Props) {
