@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { useContext } from "react";
-import { HoverContext } from "@/context/hoverContext";
+import CursorHover from "./cursorHover";
 
 export default function About() {
-  const { setHover } = useContext(HoverContext);
   return (
     <section id="about" className="pb-20 text-dynamic-black sm:px-[3vw] md:pt-20">
       <div className="mb-16 grid grid-cols-1 gap-y-6 md:grid-cols-4 mt-6">
@@ -41,15 +39,15 @@ export default function About() {
         </ul>
 
         <div className="md:self-end md:justify-self-end lg:col-span-2">
-          <a
-            href="#work"
-            className="flex items-center justify-center gap-x-2 whitespace-nowrap rounded-full border border-dynamic-black px-5 py-2 text-xs uppercase"
-            onMouseOver={() => setHover({ isHovered: true, message: "Scroll", scaleSize: 4 })}
-            onMouseLeave={() => setHover({ isHovered: false, message: "" })}
-          >
-            Explore my work
-            <Image src="/ArrowDown.svg" alt="" width="12" height="12" />
-          </a>
+          <CursorHover message="Scroll" scaleSize={4}>
+            <a
+              href="#work"
+              className="flex items-center justify-center gap-x-2 whitespace-nowrap rounded-full border border-dynamic-black px-5 py-2 text-xs uppercase"
+            >
+              Explore my work
+              <Image src="/ArrowDown.svg" alt="" width="12" height="12" />
+            </a>
+          </CursorHover>
         </div>
       </div>
     </section>

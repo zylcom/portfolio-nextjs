@@ -1,13 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import ActionButton from "@/components/actionButton";
-import Footer from "@/components/footer";
 import ScreenshotCard from "@/components/screenshotCard";
 import { Project, projectList } from "@/utils/data";
-import { HoverContext } from "@/context/hoverContext";
 import HeaderBar from "@/components/headerBar";
+import CursorHover from "@/components/cursorHover";
 
 export async function getStaticPaths() {
   const projects = projectList;
@@ -38,7 +37,6 @@ const staggerAnimation = {
 
 export default function Projects({ project }: { project: Project }) {
   const cardContainer = useRef(null);
-  const { setHover } = useContext(HoverContext);
 
   return (
     <>
@@ -56,18 +54,13 @@ export default function Projects({ project }: { project: Project }) {
           {project.workScopes}
         </motion.span>
 
-        <a
-          className="block mt-2 w-fit"
-          href={project.demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          onMouseOver={() => setHover({ isHovered: true, message: "Demo", scaleSize: 4 })}
-          onMouseLeave={() => setHover({ isHovered: false, message: "" })}
-        >
+        <CursorHover message="Demo" scaleSize={4}>
           <h1 className="text-5xl font-light leading-none md:text-8xl relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-dynamic-black after:w-0 after:h-1 after:transition-all after:duration-700 after:ease-in hover:after:w-full">
-            {project.name}
+            <a className="block mt-2 w-fit" href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+              {project.name}
+            </a>
           </h1>
-        </a>
+        </CursorHover>
 
         <div className="mt-8 grid grid-rows-[repeat(6,min-content)] grid-cols-1 md:grid-cols-12 md:grid-rows-[repeat(4,min-content)] [&>span]:font-semibold [&>p]:font-light [&>p]:text-sm">
           <span className="md:order-1 md:col-span-2">Type</span>
@@ -108,15 +101,15 @@ export default function Projects({ project }: { project: Project }) {
 
         <p className="pt-8 pb-4">{project.jobDescription}</p>
 
-        <ActionButton
-          afterContent="after:content-['Explore_my_work']"
-          className="text-sm w-max"
-          text="Explore my work"
-          href={project.repoUrl}
-          target="_blank"
-          onMouseOver={() => setHover({ isHovered: true, message: "Repo", scaleSize: 4 })}
-          onMouseLeave={() => setHover({ isHovered: false, message: "" })}
-        />
+        <CursorHover message="Repo" scaleSize={4}>
+          <ActionButton
+            afterContent="after:content-['Explore_my_work']"
+            className="text-sm w-max"
+            text="Explore my work"
+            href={project.repoUrl}
+            target="_blank"
+          />
+        </CursorHover>
 
         <h2 className="text-2xl mt-16">Screenshots</h2>
 
