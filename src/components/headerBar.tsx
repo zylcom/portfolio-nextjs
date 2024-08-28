@@ -36,7 +36,12 @@ export default function HeaderBar() {
 
       <motion.div className="order-4" initial="initial" animate="fade" variants={fadeInVariant}>
         <CursorHover scaleSize={4}>
-          <ActionButton afterContent="after:content-['Let\'s_Talk']" className="text-xs w-[120px]" text="Let's Talk" href="mailto:sabilillah272@gmail.com" />
+          <ActionButton
+            afterContent="after:content-['Let\'s_Talk']"
+            className="text-xs w-[120px] border"
+            text="Let's Talk"
+            href="mailto:sabilillah272@gmail.com"
+          />
         </CursorHover>
       </motion.div>
     </div>

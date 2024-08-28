@@ -35,13 +35,13 @@ type ProjectList = Array<Project>;
 const projectList: ProjectList = [
   {
     id: 1,
-    name: "Foodee Order",
-    slug: "foodee-order",
+    name: "BarResto App",
+    slug: "bar-resto",
     year: "2023",
     typeApp: "E-commerce",
     workScopes: "Web Development | UX Design | Automation Testing",
-    demoUrl: "https://foody-order.vercel.app",
-    repoUrl: "https://github.com/zylcom/foody-order",
+    demoUrl: "https://bar-resto.vercel.app",
+    repoUrl: "https://github.com/zylcom/bar-resto",
     coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/v1701943061/laptop-phone-mockup_io1vtm.jpg",
     description: "Food ordering app with modern UI design and responsive in any devices. Order food that you want just using your browser.",
     jobDescription:
@@ -89,9 +89,9 @@ const projectList: ProjectList = [
   },
   {
     id: 2,
-    name: "Foodee Order RESTful API",
+    name: "BarResto RESTful API",
     coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/v1706174747/foody-order-rest-api-desktop_pzyfly.png",
-    slug: "foodee-rest-api",
+    slug: "bar-resto-rest-api",
     typeApp: "REST API",
     year: "2023",
     demoUrl: "https://foody-order-rest-api.vercel.app/api/docs/",

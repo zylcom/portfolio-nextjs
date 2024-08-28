@@ -55,8 +55,8 @@ export default function Projects({ project }: { project: Project }) {
         </motion.span>
 
         <CursorHover message="Demo" scaleSize={4}>
-          <h1 className="text-5xl font-light leading-none md:text-8xl relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-dynamic-black after:w-0 after:h-1 after:transition-all after:duration-700 after:ease-in hover:after:w-full">
-            <a className="block mt-2 w-fit" href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+          <h1 className="text-5xl w-fit font-light leading-none md:text-8xl relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-dynamic-black after:w-0 after:h-1 after:transition-all after:duration-700 after:ease-in hover:after:w-full">
+            <a className="block mt-2" href={project.demoUrl} target="_blank" rel="noopener noreferrer">
               {project.name}
             </a>
           </h1>
@@ -104,7 +104,7 @@ export default function Projects({ project }: { project: Project }) {
         <CursorHover message="Repo" scaleSize={4}>
           <ActionButton
             afterContent="after:content-['Explore_my_work']"
-            className="text-sm w-max"
+            className="text-sm w-max border"
             text="Explore my work"
             href={project.repoUrl}
             target="_blank"

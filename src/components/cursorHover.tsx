@@ -5,7 +5,7 @@ export default function CursorHover({ children, scaleSize = 1, message = "" }: {
   const { setHover } = useContext(HoverContext);
 
   return (
-    <div onMouseOver={() => setHover({ isHovered: true, message, scaleSize })} onMouseLeave={() => setHover({ isHovered: false, message })}>
+    <div className="w-fit" onMouseOver={() => setHover({ isHovered: true, message, scaleSize })} onMouseLeave={() => setHover({ isHovered: false, message })}>
       {children}
     </div>
   );
