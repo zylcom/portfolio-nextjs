@@ -12,13 +12,7 @@ type ProjectItemProps = {
   setModal: Dispatch<SetStateAction<Modal>>;
 };
 
-export default function ProjectItem({
-  projectName,
-  imageUrl,
-  index,
-  slug,
-  setModal,
-}: ProjectItemProps) {
+export default function ProjectItem({ projectName, imageUrl, index, slug, setModal }: ProjectItemProps) {
   const { setHover } = useContext(HoverContext);
 
   return (
@@ -26,9 +20,7 @@ export default function ProjectItem({
       <details className="[&[open]+div]:max-h-56 [&[open]+div]:pb-2 [&[open]>summary_span:first-of-type]:rotate-[360deg] [&[open]>summary_span:last-of-type]:rotate-[270deg] md:hidden">
         <summary
           className="list-none flex justify-between items-center my-2 cursor-pointer"
-          onMouseOver={() =>
-            setHover({ isHovered: true, message: "", scaleSize: 4 })
-          }
+          onMouseOver={() => setHover({ isHovered: true, message: "", scaleSize: 4 })}
           onMouseLeave={() => setHover({ isHovered: false, message: "" })}
         >
           {projectName}
@@ -44,18 +36,10 @@ export default function ProjectItem({
         <Link
           href={`/projects/${slug}`}
           className="relative z-10 h-full w-full shrink-0 mb-2"
-          onMouseOver={() =>
-            setHover({ isHovered: true, message: "See Case", scaleSize: 8 })
-          }
+          onMouseOver={() => setHover({ isHovered: true, message: "See Case", scaleSize: 8 })}
           onMouseLeave={() => setHover({ isHovered: false, message: "" })}
         >
-          <Image
-            src={imageUrl}
-            alt={projectName}
-            width="1000"
-            height="800"
-            priority
-          />
+          <Image src={imageUrl} alt={projectName} width="1000" height="800" priority />
         </Link>
       </div>
 
@@ -64,10 +48,7 @@ export default function ProjectItem({
         onMouseOver={() => setModal({ active: true, index })}
         onMouseLeave={() => setModal({ active: false, index })}
       >
-        <Link
-          href={`/projects/${slug}`}
-          className="text-4xl block w-full transition-all duration-200 group-hover:translate-x-2 group-hover:opacity-50"
-        >
+        <Link href={`/projects/${slug}`} className="text-4xl block w-full transition-all duration-200 group-hover:translate-x-2 group-hover:opacity-50">
           {projectName}
         </Link>
       </div>

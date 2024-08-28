@@ -24,53 +24,29 @@ export default function HeaderBar() {
       <Link
         href="/"
         className="row-span-3 first-letter:text-xl"
-        onMouseOver={() =>
-          setHover({ isHovered: true, message: "Home", scaleSize: 4 })
-        }
+        onMouseOver={() => setHover({ isHovered: true, message: "Home", scaleSize: 4 })}
         onMouseLeave={() => setHover({ isHovered: false, message: "" })}
       >
-        <motion.span
-          className="block ml-3"
-          initial="initial"
-          animate="fade"
-          variants={fadeInVariant}
-        >
+        <motion.span className="block ml-3" initial="initial" animate="fade" variants={fadeInVariant}>
           Sabilillah
         </motion.span>
       </Link>
 
-      <motion.span
-        className="order-2"
-        initial="initial"
-        animate="fade"
-        variants={fadeInVariant}
-      >
+      <motion.span className="order-2" initial="initial" animate="fade" variants={fadeInVariant}>
         Front-end Developer / <br className="lg:hidden" /> Web Developer
       </motion.span>
 
-      <motion.span
-        className="order-3 mt-2"
-        initial="initial"
-        animate="fade"
-        variants={fadeInVariant}
-      >
+      <motion.span className="order-3 mt-2" initial="initial" animate="fade" variants={fadeInVariant}>
         Available for hire
       </motion.span>
 
-      <motion.div
-        className="order-4"
-        initial="initial"
-        animate="fade"
-        variants={fadeInVariant}
-      >
+      <motion.div className="order-4" initial="initial" animate="fade" variants={fadeInVariant}>
         <ActionButton
           afterContent="after:content-['Let\'s_Talk']"
           className="text-xs w-[120px]"
           text="Let's Talk"
           href="mailto:sabilillah272@gmail.com"
-          onMouseOver={() =>
-            setHover({ isHovered: true, message: "", scaleSize: 4 })
-          }
+          onMouseOver={() => setHover({ isHovered: true, message: "", scaleSize: 4 })}
           onMouseLeave={() => setHover({ isHovered: false, message: "" })}
         />
       </motion.div>

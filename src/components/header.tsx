@@ -13,34 +13,21 @@ export default function Header() {
       <HeaderBar />
 
       <section className="grid grid-cols-1 items-center gap-8 p-3 sm:grid-cols-2">
-        <Image
-          src="/hero-image.png"
-          alt=""
-          width="500"
-          height="500"
-          className="mx-auto hidden sm:order-2 sm:block md:w-[50vh]"
-          priority
-        />
+        <Image src="/hero-image.png" alt="" width="500" height="500" className="mx-auto hidden sm:order-2 sm:block md:w-[50vh]" priority />
 
         <div className="mr-16 sm:order-1">
-          <h2 className="text-justify text-3xl font-bold leading-7  lg:text-5xl">
-            Hello World!
-          </h2>
+          <h2 className="text-justify text-3xl font-bold leading-7  lg:text-5xl">Hello World!</h2>
 
           <p className="mt-7 text-sm leading-4 md:text-base md:leading-4 lg:text-lg">
-            I am Sabilillah a Front-end Developer from Jakarta, Indonesia.
-            I&apos;m currently is available for hire as a Web Developer.
+            I am Sabilillah a Front-end Developer from Jakarta, Indonesia. I&apos;m currently is available for hire as a Web Developer.
           </p>
 
           <ActionButton
             afterContent="after:content-['Explore_My_CV']"
             text="Explore My CV"
             className="text-xs mt-5 border border-lighthouse hidden sm:block uppercase w-fit bg-eerie-black ml-auto"
-            href="https://zylcom.github.io/cv-resume"
-            target="_blank"
-            onMouseOver={() =>
-              setHover({ isHovered: true, message: "", scaleSize: 4 })
-            }
+            href="/cv"
+            onMouseOver={() => setHover({ isHovered: true, message: "", scaleSize: 4 })}
             onMouseLeave={() => setHover({ isHovered: false, message: "" })}
           />
         </div>
@@ -55,9 +42,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              onMouseOver={() =>
-                setHover({ isHovered: true, message: "", scaleSize: 3 })
-              }
+              onMouseOver={() => setHover({ isHovered: true, message: "", scaleSize: 3 })}
               onMouseLeave={() => setHover({ isHovered: false, message: "" })}
             >
               {social.socialName}

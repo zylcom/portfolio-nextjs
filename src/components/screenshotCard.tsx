@@ -39,9 +39,7 @@ export default function ScreenshotCard({ screenshot }: Props) {
         )}
         <motion.img
           className="absolute w-full top-0"
-          src={`https://picsum.photos/id/${screenshot.devices.backgroundId}/${
-            isMedium ? "1440/1056" : "480/987"
-          }`}
+          src={`https://picsum.photos/id/${screenshot.devices.backgroundId}/${isMedium ? "1440/1056" : "480/987"}`}
           width={1000}
           height={800}
           alt=""
@@ -52,9 +50,7 @@ export default function ScreenshotCard({ screenshot }: Props) {
       <div className="w-11/12 rounded shadow-lg mx-auto overflow-hidden absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-auto md:right-16 sm:w-4/5 md:h-3/5 md:w-auto md:fixed">
         <Image
           className="w-full h-full object-cover"
-          src={
-            isMedium ? screenshot.devices.mobile : screenshot.devices.desktop
-          }
+          src={isMedium ? screenshot.devices.mobile : screenshot.devices.desktop}
           width={1000}
           height={800}
           alt="Screenshot"

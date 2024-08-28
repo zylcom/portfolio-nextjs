@@ -7,7 +7,7 @@ export function useMousePosition(
   spring = {
     stiffness: 200,
     damping: 50,
-  }
+  },
 ) {
   const mousePosition = {
     x: useSpring(0, spring),

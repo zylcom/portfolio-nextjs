@@ -24,17 +24,8 @@ export default function CertificateCard({ certificateDetail }: Props) {
   });
 
   return (
-    <div
-      className="h-auto flex items-center justify-center first:mt-32 sm:first:mt-72 sticky top-1/2 px-3 -translate-y-1/2"
-      ref={imageContainer}
-    >
-      <a
-        href={certificateDetail.verificationUrl}
-        title={certificateDetail.title}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block"
-      >
+    <div className="h-auto flex items-center justify-center first:mt-32 sm:first:mt-72 sticky top-1/2 px-3 -translate-y-1/2" ref={imageContainer}>
+      <a href={certificateDetail.verificationUrl} title={certificateDetail.title} target="_blank" rel="noopener noreferrer" className="block">
         <motion.img
           src={certificateDetail.imageUrl}
           alt={certificateDetail.title}
@@ -44,9 +35,7 @@ export default function CertificateCard({ certificateDetail }: Props) {
           ref={certificateImage}
           initial={{ scale: 0.8 }}
           style={{ scale: imageScale }}
-          onMouseOver={() =>
-            setHover({ isHovered: true, message: "Verify", scaleSize: 8 })
-          }
+          onMouseOver={() => setHover({ isHovered: true, message: "Verify", scaleSize: 8 })}
           onMouseLeave={() => setHover({ isHovered: false, message: "" })}
         />
       </a>

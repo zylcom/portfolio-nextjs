@@ -20,10 +20,7 @@ export default function CursorMask() {
       style={{ x, y }}
     >
       {isHovered && (
-        <motion.span
-          className="text-xs whitespace-nowrap"
-          style={{ scale: scaleSize ? 1 / scaleSize : 0.2 }}
-        >
+        <motion.span className="text-xs whitespace-nowrap" style={{ scale: scaleSize ? 1 / scaleSize : 0.2 }}>
           {message}
         </motion.span>
       )}

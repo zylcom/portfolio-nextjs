@@ -3,12 +3,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
 }
 
-export default function ActionButton({
-  afterContent,
-  className,
-  text,
-  ...props
-}: Props) {
+export default function ActionButton({ afterContent, className, text, ...props }: Props) {
   return (
     <a
       className={
