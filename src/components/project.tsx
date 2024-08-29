@@ -14,14 +14,7 @@ export default function Project() {
       <h2 className="mb-12 text-center text-3xl">My Work</h2>
 
       {projects.map((project, index) => (
-        <ProjectItem
-          index={index}
-          projectName={project.name}
-          imageUrl={project.coverImageUrl}
-          slug={project.slug}
-          setModal={setModal}
-          key={project.id}
-        />
+        <ProjectItem index={index} projectName={project.name} imageUrl={project.coverImageUrl} slug={project.slug} setModal={setModal} key={project.id} />
       ))}
 
       <ModalGallery modal={modal} projects={projects} />

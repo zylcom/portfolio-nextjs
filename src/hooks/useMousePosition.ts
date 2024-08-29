@@ -1,4 +1,4 @@
-import { SpringOptions, useSpring } from "framer-motion";
+import { useSpring } from "framer-motion";
 import { useEffect } from "react";
 
 export function useMousePosition(
@@ -7,7 +7,7 @@ export function useMousePosition(
   spring = {
     stiffness: 200,
     damping: 50,
-  }
+  },
 ) {
   const mousePosition = {
     x: useSpring(0, spring),

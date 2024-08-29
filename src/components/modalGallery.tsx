@@ -53,23 +53,10 @@ export default function ModalGallery({ modal, projects }: Props) {
         animate={modal.active ? "enter" : "closed"}
         style={{ x, y }}
       >
-        <motion.div
-          className="absolute w-full h-full transition-[top] duration-300 ease-in-out"
-          style={{ top: modal.index * -100 + "%" }}
-        >
+        <motion.div className="absolute w-full h-full transition-[top] duration-300 ease-in-out" style={{ top: modal.index * -100 + "%" }}>
           {projects.map((project) => (
-            <div
-              className="flex justify-center items-center w-full h-full bg-dynamic-black px-4"
-              key={project.id}
-            >
-              <Image
-                className="w-full"
-                src={project.coverImageUrl}
-                height={1000}
-                width={800}
-                alt={project.name}
-                priority
-              />
+            <div className="flex justify-center items-center w-full h-full bg-dynamic-black px-4" key={project.id}>
+              <Image className="w-full" src={project.coverImageUrl} height={1000} width={800} alt={project.name} priority />
             </div>
           ))}
         </motion.div>

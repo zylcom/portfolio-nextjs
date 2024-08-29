@@ -11,9 +11,7 @@ export default function Certificate() {
 
       <div className="relative" ref={certificateContainer}>
         {certificates.map((certificate, index) => {
-          return (
-            <CertificateCard key={index} certificateDetail={certificate} />
-          );
+          return <CertificateCard key={index} certificateDetail={certificate} />;
         })}
       </div>
     </>
