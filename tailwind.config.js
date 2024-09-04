@@ -18,6 +18,9 @@ module.exports = {
         "piano-black": "#161819",
         "zhen-zhu-bai-pearl": "#f8f8f8",
       },
+      fontFamily: {
+        charter: ["charter", "sans-serif"],
+      },
       keyframes: {
         marquee: {
           from: { transform: "translateX(0)" },
@@ -26,5 +29,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

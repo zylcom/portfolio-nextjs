@@ -9,17 +9,17 @@ export default function Cv() {
         <title>My Personal CV</title>
       </Head>
 
-      <header className="p-3 bg-white w-full">
+      <header className="w-full p-3">
         <HeaderBar />
       </header>
 
-      <main className="max-w-screen-lg mx-auto space-y-9 p-7 w-full [&_section_h2]:font-medium md:[&_section_h2]:text-3xl [&_section_h2]:mb-2 [&_section_h2]:pb-1 [&_section_h2]:border-b [&_section_h2]:border-b-dynamic-black [&_section_h2]:text-xl">
+      <main className="mx-auto mb-20 w-full max-w-screen-lg space-y-9 bg-white p-7 [&_section_h2]:mb-2 [&_section_h2]:border-b [&_section_h2]:border-b-dynamic-black [&_section_h2]:pb-1 [&_section_h2]:text-xl [&_section_h2]:font-medium md:[&_section_h2]:text-3xl">
         <section className="w-full">
-          <h1 className="uppercase text-5xl text-center font-bold mb-2">Sabilillah</h1>
+          <h1 className="mb-2 text-center text-5xl font-bold uppercase">Sabilillah</h1>
 
-          <p className="text-sm uppercase text-center border-b-2 border-b-dynamic-black/50 pb-2 w-4/5 mx-auto">Web Developer | Front-end Developer</p>
+          <p className="mx-auto w-4/5 border-b-2 border-b-dynamic-black/50 pb-2 text-center text-sm uppercase">Web Developer | Front-end Developer</p>
 
-          <div className="justify-center flex items-center gap-x-2 pt-1 text-xs flex-col sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-x-2 pt-1 text-xs sm:flex-row">
             <span>Cengkareng, Jakarta</span>
 
             <span className="hidden sm:block">&bull;</span>
@@ -49,7 +49,7 @@ export default function Cv() {
         <section>
           <h2>Areas of Expertise</h2>
 
-          <ul className="[&_li]:list-disc pl-10 text-sm sm:text-base">
+          <ul className="pl-10 text-sm sm:text-base [&_li]:list-disc">
             <li>Programming Languages: HTML, CSS, JavaScript/TypeScript, PHP, Nodejs</li>
             <li>Front-end Framework: Vue, React, Tailwindcss</li>
             <li>Back-end Framework: Laravel, Express</li>
@@ -68,7 +68,7 @@ export default function Cv() {
 
               <p className="mb-4 text-sm sm:text-base">Front-end Developer (Dec 2023 – Current)</p>
 
-              <ul className="[&_li]:list-disc pl-10 text-sm sm:text-base">
+              <ul className="pl-10 text-sm sm:text-base [&_li]:list-disc">
                 <li>Developed a secure, interactive web application with a modern front-end framework and an intuitive user interface</li>
                 <li>Utilized library and frameworks such as Vue and Tailwindcss to create interactive user interfaces</li>
                 <li>Developed and implemented automated testing scripts to improve test coverage and reduce the amount of time spent on manual testing</li>
@@ -81,7 +81,7 @@ export default function Cv() {
 
               <p className="mb-4 text-sm sm:text-base">Back-end Developer (Dec 2023 - Current) </p>
 
-              <ul className="[&_li]:list-disc pl-10 text-sm sm:text-base">
+              <ul className="pl-10 text-sm sm:text-base [&_li]:list-disc">
                 <li>Developed a RESTful API that allowed for secure and efficient data transfer between the front-end and back-end systems</li>
                 <li>Developed integration tests to ensure bug-free code and a high-quality user experience</li>
                 <li>Integrated a payment gateway into the web application that allowed for secure online payments</li>

@@ -15,6 +15,8 @@
     "@types/react-dom": "18.0.10",
     "aos": "^3.0.0-beta.6",
     "caniuse-lite": "^1.0.30001651",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.6",
     "framer-motion": "^10.16.16",
@@ -23,17 +25,22 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.12.0",
+    "react-markdown": "^9.0.1",
     "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.2",
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.13",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-prettier": "5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwindcss": "^3.2.4",
     "user-agent-data-types": "^0.4.2"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

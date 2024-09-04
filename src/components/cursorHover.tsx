@@ -1,4 +1,5 @@
 import { HoverContext } from "@/context/hoverContext";
+import { cn } from "@/utils/utils";
 import { ReactNode, useContext } from "react";
 
 export default function CursorHover({
@@ -16,7 +17,7 @@ export default function CursorHover({
 
   return (
     <div
-      className={"w-fit " + className}
+      className={cn("w-fit", className)}
       onMouseOver={() => setHover({ isHovered: true, message, scaleSize })}
       onMouseLeave={() => setHover({ isHovered: false, message })}
     >
