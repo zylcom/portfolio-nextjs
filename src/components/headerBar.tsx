@@ -20,7 +20,7 @@ export default function HeaderBar() {
     <div className="grid grid-cols-[1fr_minmax(10px,_130px)] grid-rows-3 py-9 sm:flex sm:items-center sm:justify-between [&>*:not(:first-child)]:text-[.57rem] [&>*:not(:first-child)]:uppercase">
       <CursorHover message="Home" scaleSize={4}>
         <Link href="/" className="row-span-3 first-letter:text-xl">
-          <motion.span className="block ml-3" initial="initial" animate="fade" variants={fadeInVariant}>
+          <motion.span className="block sm:ml-3" initial="initial" animate="fade" variants={fadeInVariant}>
             Sabilillah
           </motion.span>
         </Link>
@@ -38,7 +38,7 @@ export default function HeaderBar() {
         <CursorHover scaleSize={4}>
           <ActionButton
             afterContent="after:content-['Let\'s_Talk']"
-            className="text-xs w-[120px] border"
+            className="w-[120px] border text-xs"
             text="Let's Talk"
             href="mailto:sabilillah272@gmail.com"
           />

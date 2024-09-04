@@ -11,7 +11,7 @@ export default function CursorMask() {
 
   return (
     <motion.div
-      className="rounded-full bg-white [mix-blend-mode:difference] h-4 w-4 fixed left-0 top-0 z-50 pointer-events-none flex justify-center items-center"
+      className="pointer-events-none fixed left-0 top-0 z-50 flex h-4 w-4 items-center justify-center rounded-full bg-white [mix-blend-mode:difference]"
       initial={{ scale: 1 }}
       animate={{
         scale: isHovered ? scaleSize : 1,
@@ -20,7 +20,7 @@ export default function CursorMask() {
       style={{ x, y }}
     >
       {isHovered && (
-        <motion.span className="text-xs whitespace-nowrap" style={{ scale: scaleSize ? 1 / scaleSize : 0.2 }}>
+        <motion.span className="whitespace-nowrap text-xs" style={{ scale: scaleSize ? 1 / scaleSize : 0.2 }}>
           {message}
         </motion.span>
       )}

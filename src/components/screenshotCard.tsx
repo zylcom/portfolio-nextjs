@@ -23,13 +23,13 @@ export default function ScreenshotCard({ screenshot }: Props) {
 
   return (
     <div
-      className="min-h-[280px] max-h-[380px] md:max-h-min overflow-hidden relative w-full md:overflow-visible [clip-path:polygon(0_0,0_100%,100%_100%,100%_0)]"
+      className="relative max-h-[380px] min-h-[280px] w-full overflow-hidden [clip-path:polygon(0_0,0_100%,100%_100%,100%_0)] md:max-h-min md:overflow-visible"
       ref={wrapper}
     >
-      <motion.div className="min-h-full relative flex items-center justify-center p-8">
+      <motion.div className="relative flex min-h-full items-center justify-center p-8">
         {isMedium && (
           <Image
-            className="h-auto w-7/12 mr-auto relative z-10 ml-20 lg:ml-32"
+            className="relative z-10 mr-auto ml-20 h-auto w-7/12 lg:ml-32"
             src={screenshot.devices.desktop}
             alt="Screenshot"
             height={1000}
@@ -38,7 +38,7 @@ export default function ScreenshotCard({ screenshot }: Props) {
           />
         )}
         <motion.img
-          className="absolute w-full top-0"
+          className="absolute top-0 w-full"
           src={`https://picsum.photos/id/${screenshot.devices.backgroundId}/${isMedium ? "1440/1056" : "480/987"}`}
           width={1000}
           height={800}
@@ -47,9 +47,9 @@ export default function ScreenshotCard({ screenshot }: Props) {
         />
       </motion.div>
 
-      <div className="w-11/12 rounded shadow-lg mx-auto overflow-hidden absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-auto md:right-16 sm:w-4/5 md:h-3/5 md:w-auto md:fixed">
+      <div className="absolute top-1/2 left-1/2 mx-auto w-11/12 -translate-y-1/2 -translate-x-1/2 overflow-hidden rounded shadow-lg sm:w-4/5 md:fixed md:left-auto md:right-16 md:h-3/5 md:w-auto md:-translate-x-0">
         <Image
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
           src={isMedium ? screenshot.devices.mobile : screenshot.devices.desktop}
           width={1000}
           height={800}

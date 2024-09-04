@@ -23,13 +23,13 @@ export default function CertificateCard({ certificateDetail }: Props) {
   });
 
   return (
-    <div className="h-auto flex items-center justify-center first:mt-32 sm:first:mt-72 sticky top-1/2 px-3 -translate-y-1/2" ref={imageContainer}>
+    <div className="sticky top-1/2 flex h-auto -translate-y-1/2 items-center justify-center px-3 first:mt-32 sm:first:mt-72" ref={imageContainer}>
       <a href={certificateDetail.verificationUrl} title={certificateDetail.title} target="_blank" rel="noopener noreferrer" className="block">
         <CursorHover message="Verify" scaleSize={8}>
           <motion.img
             src={certificateDetail.imageUrl}
             alt={certificateDetail.title}
-            className="w-full rounded shadow-md max-h-screen md:w-auto md:max-w-screen-md"
+            className="max-h-screen w-full rounded shadow-md md:w-auto md:max-w-screen-md"
             width={1000}
             height={800}
             ref={certificateImage}
