@@ -6,7 +6,7 @@ import CursorHover from "./cursorHover";
 export default function BlogList({ blogs }: { blogs: Blog[] }) {
   return (
     <>
-      <div className="mb-6 flex items-center justify-center md:justify-between pt-5">
+      <div className="mb-6 flex items-center justify-center pt-5 md:justify-between">
         <h2 className="block text-3xl text-piano-black">Latest articles</h2>
 
         <CursorHover scaleSize={4} className="hidden md:block">

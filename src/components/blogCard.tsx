@@ -5,7 +5,7 @@ import CursorHover from "./cursorHover";
 
 export default function BlogCard({ blog }: { blog: Blog }) {
   return (
-    <CursorHover scaleSize={6} message="Read" className="group relative overflow-hidden rounded-xl bg-bleached-silk shadow-md w-full">
+    <CursorHover scaleSize={6} message="Read" className="group relative w-full overflow-hidden rounded-xl bg-bleached-silk shadow-md">
       <Link href={`/blogs/${blog.slug}`} key={blog.slug}>
         <div className="aspect-square overflow-hidden">
           <Image
