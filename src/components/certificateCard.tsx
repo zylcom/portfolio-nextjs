@@ -18,10 +18,6 @@ export default function CertificateCard({ certificateDetail }: Props) {
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
-  scrollYProgress.on("change", (latest) => {
-    console.log(latest);
-  });
-
   return (
     <div className="sticky top-1/2 flex h-auto -translate-y-1/2 items-center justify-center px-3 first:mt-32 sm:first:mt-72" ref={imageContainer}>
       <a href={certificateDetail.verificationUrl} title={certificateDetail.title} target="_blank" rel="noopener noreferrer" className="block">
