@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useRef } from "react";
 import ActionButton from "@/components/actionButton";
 import ScreenshotCard from "@/components/screenshotCard";
 import { Project, projectList } from "@/utils/data";
-import HeaderBar from "@/components/headerBar";
+import HeaderBar from "@/components/navigationBar";
 import CursorHover from "@/components/cursorHover";
 
 export async function getStaticPaths() {
@@ -55,14 +55,14 @@ export default function Projects({ project }: { project: Project }) {
         </motion.span>
 
         <CursorHover message="Demo" scaleSize={4}>
-          <h1 className="relative w-fit text-5xl font-light leading-none after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-dynamic-black after:transition-all after:duration-700 after:ease-in after:content-[''] hover:after:w-full md:text-8xl">
+          <h1 className="after:bg-dynamic-black relative w-fit text-5xl leading-none font-light after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:transition-all after:duration-700 after:ease-in after:content-[''] hover:after:w-full md:text-8xl">
             <a className="mt-2 block" href={project.demoUrl} target="_blank" rel="noopener noreferrer">
               {project.name}
             </a>
           </h1>
         </CursorHover>
 
-        <div className="mt-8 grid grid-cols-1 grid-rows-[repeat(6,min-content)] md:grid-cols-12 md:grid-rows-[repeat(4,min-content)] [&>span]:font-semibold [&>p]:text-sm [&>p]:font-light">
+        <div className="mt-8 grid grid-cols-1 grid-rows-[repeat(6,min-content)] md:grid-cols-12 md:grid-rows-[repeat(4,min-content)] [&>p]:text-sm [&>p]:font-light [&>span]:font-semibold">
           <span className="md:order-1 md:col-span-2">Type</span>
           <motion.p className="md:order-4 md:col-span-2 md:row-start-2" variants={staggerAnimation} initial="initial" animate="visible">
             {project.typeApp}
@@ -90,7 +90,7 @@ export default function Projects({ project }: { project: Project }) {
             animate="visible"
           >
             {project.techStack.map((stack, index) => (
-              <motion.span variants={staggerAnimation} className="rounded-full border border-dynamic-black/40 px-5 py-1 text-[.65rem] uppercase" key={index}>
+              <motion.span variants={staggerAnimation} className="border-dynamic-black/40 rounded-full border px-5 py-1 text-[.65rem] uppercase" key={index}>
                 {stack}
               </motion.span>
             ))}
@@ -113,7 +113,7 @@ export default function Projects({ project }: { project: Project }) {
 
         <h2 className="mt-16 text-2xl">Screenshots</h2>
 
-        <div className="mt-2 h-1 w-full border-t border-t-dynamic-black/30" />
+        <div className="border-t-dynamic-black/30 mt-2 h-1 w-full border-t" />
 
         <div ref={cardContainer} className="mb-8">
           {project.screenshots.map((screenshot, index) => (

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HeaderBar from "@/components/headerBar";
+import HeaderBar from "@/components/navigationBar";
 import CursorHover from "@/components/cursorHover";
 
 export default function Cv() {
@@ -14,11 +14,11 @@ export default function Cv() {
         <HeaderBar />
       </header>
 
-      <main className="mx-auto mb-20 w-full max-w-screen-lg space-y-9 bg-white p-7 [&_section_h2]:mb-2 [&_section_h2]:border-b [&_section_h2]:border-b-dynamic-black [&_section_h2]:pb-1 [&_section_h2]:text-xl [&_section_h2]:font-medium md:[&_section_h2]:text-3xl">
+      <main className="[&_section_h2]:border-b-dynamic-black mx-auto mb-20 w-full max-w-screen-lg space-y-9 bg-white p-7 [&_section_h2]:mb-2 [&_section_h2]:border-b [&_section_h2]:pb-1 [&_section_h2]:text-xl [&_section_h2]:font-medium md:[&_section_h2]:text-3xl">
         <section className="w-full">
           <h1 className="mb-2 text-center text-5xl font-bold uppercase">Sabilillah</h1>
 
-          <p className="mx-auto w-4/5 border-b-2 border-b-dynamic-black/50 pb-2 text-center text-sm uppercase">Web Developer | Front-end Developer</p>
+          <p className="border-b-dynamic-black/50 mx-auto w-4/5 border-b-2 pb-2 text-center text-sm uppercase">Web Developer | Front-end Developer</p>
 
           <div className="flex flex-col items-center justify-center gap-x-2 pt-1 text-xs sm:flex-row">
             <span>Cengkareng, Jakarta</span>
@@ -76,7 +76,7 @@ export default function Cv() {
               <p className="text-sm sm:text-base">Full-stack Developer (Oct 2024 - Current)</p>
 
               <CursorHover scaleSize={4}>
-                <a className="mb-4 block text-sm text-nickel hover:underline" href="https://upmedia.co.id" target="_blank">
+                <a className="text-nickel mb-4 block text-sm hover:underline" href="https://upmedia.co.id" target="_blank">
                   https://upmedia.co.id
                 </a>
               </CursorHover>
@@ -102,7 +102,7 @@ export default function Cv() {
               <p className="text-sm sm:text-base">Front-end Developer (Dec 2023)</p>
 
               <CursorHover message="" scaleSize={4}>
-                <a className="mb-4 block text-sm text-nickel hover:underline" href="https://fostfoad.vercel.app" target="_blank">
+                <a className="text-nickel mb-4 block text-sm hover:underline" href="https://fostfoad.vercel.app" target="_blank">
                   https://fostfoad.vercel.app
                 </a>
               </CursorHover>
@@ -121,7 +121,7 @@ export default function Cv() {
               <p className="text-sm sm:text-base">Back-end Developer (Dec 2023) </p>
 
               <CursorHover message="" scaleSize={4}>
-                <a className="mb-4 block text-sm text-nickel hover:underline" href="https://fostfoad-rest-api.vercel.app" target="_blank">
+                <a className="text-nickel mb-4 block text-sm hover:underline" href="https://fostfoad-rest-api.vercel.app" target="_blank">
                   https://fostfoad-rest-api.vercel.app
                 </a>
               </CursorHover>
@@ -151,7 +151,7 @@ export default function Cv() {
 
               <p className="text-sm sm:text-base">freeCodeCamp - Online</p>
 
-              <p className="text-sm text-nickel">
+              <p className="text-nickel text-sm">
                 Verify this certification at:{" "}
                 <a className="underline underline-offset-8" href="https://freecodecamp.org/certification/zylcom/responsive-web-design" target="_blank">
                   https://freecodecamp.org/certification/zylcom/responsive-web-design

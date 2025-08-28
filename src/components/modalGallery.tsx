@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Easing, motion } from "motion/react";
 import { Project } from "@/utils/data";
 import { Modal } from "./project";
 import Image from "next/image";
@@ -17,17 +17,17 @@ const scaleAnimation = {
     scale: 1,
     borderRadius: "0%",
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100,
       duration: 0.4,
-      ease: [0.76, 0, 0.24, 1],
+      ease: [0.76, 0, 0.24, 1] as Easing,
       borderRadius: { type: "tween" },
     },
   },
   closed: {
     scale: 0,
     borderRadius: "100%",
-    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] as Easing },
   },
 };
 
@@ -55,7 +55,7 @@ export default function ModalGallery({ modal, projects }: Props) {
       >
         <motion.div className="absolute h-full w-full transition-[top] duration-300 ease-in-out" style={{ top: modal.index * -100 + "%" }}>
           {projects.map((project) => (
-            <div className="flex h-full w-full items-center justify-center bg-dynamic-black px-4" key={project.id}>
+            <div className="bg-dynamic-black flex h-full w-full items-center justify-center px-4" key={project.id}>
               <Image className="w-full" src={project.coverImageUrl} height={1000} width={800} alt={project.name} priority />
             </div>
           ))}

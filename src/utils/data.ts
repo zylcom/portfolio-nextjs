@@ -194,8 +194,8 @@ const blogs: Blog[] = [
   {
     slug: "belajar-dasar-dasar-docker",
     title: "Belajar Dasar Dasar Docker",
-    thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/hero-bg_t5d6vm.webp",
-    coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/hero-bg_t5d6vm.webp",
+    thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+    coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/v1701943061/laptop-phone-mockup_io1vtm.jpg",
     excerpt: "Belajar menggunakan docker...",
     content: `
 Ini adalah artikel pertama saya, yeay. Artikel ini berisi tentang bagaimana cara menggunakan docker untuk pemula. Tujuan dibuatnya artikel ini adalah sebagai dokumentasi saya dalam belajar menggunakan docker dan saya bisa membacanya kembali jika diperlukan.
@@ -242,38 +242,38 @@ systemctl start docker.service
 ~~~
 `,
   },
-  {
-    slug: "blog-2",
-    title: "Blog 2",
-    content: "Content 2",
-    thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/hero-bg_t5d6vm.webp",
-    coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/hero-bg_t5d6vm.webp",
-    excerpt: "Content 2 excerpt",
-  },
-  {
-    slug: "blog-3",
-    title: "Blog 3",
-    content: "Content 3",
-    thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/hero-bg_t5d6vm.webp",
-    coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/hero-bg_t5d6vm.webp",
-    excerpt: "Content 3 excerpt",
-  },
-  {
-    slug: "blog-4",
-    title: "Blog 4",
-    content: "Content 4",
-    thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/hero-bg_t5d6vm.webp",
-    coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/hero-bg_t5d6vm.webp",
-    excerpt: "Content 4 excerpt",
-  },
-  {
-    slug: "blog-5",
-    title: "Blog 5",
-    content: "Content 5",
-    thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/hero-bg_t5d6vm.webp",
-    coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/hero-bg_t5d6vm.webp",
-    excerpt: "Content 5 excerpt",
-  },
+  // {
+  //   slug: "blog-2",
+  //   title: "Blog 2",
+  //   content: "Content 2",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 2 excerpt",
+  // },
+  // {
+  //   slug: "blog-3",
+  //   title: "Blog 3",
+  //   content: "Content 3",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 3 excerpt",
+  // },
+  // {
+  //   slug: "blog-4",
+  //   title: "Blog 4",
+  //   content: "Content 4",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 4 excerpt",
+  // },
+  // {
+  //   slug: "blog-5",
+  //   title: "Blog 5",
+  //   content: "Content 5",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 5 excerpt",
+  // },
 ];
 
 export { blogs, certificates, projectList, skills, socials };

@@ -14,15 +14,15 @@ type ProjectItemProps = {
 
 export default function ProjectItem({ projectName, imageUrl, index, slug, setModal }: ProjectItemProps) {
   return (
-    <div className="relative border-b border-b-dynamic-black/50 px-4 last:mb-2 first-of-type:border-t first-of-type:border-t-dynamic-black/50 md:px-8">
+    <div className="border-b-dynamic-black/50 first-of-type:border-t-dynamic-black/50 relative border-b px-4 last:mb-2 first-of-type:border-t md:px-8">
       <details className="md:hidden [&[open]+div]:max-h-56 [&[open]+div]:pb-2 [&[open]>summary_span:first-of-type]:rotate-[360deg] [&[open]>summary_span:last-of-type]:rotate-[270deg]">
         <summary className="w-full cursor-pointer list-none">
           <CursorHover scaleSize={4} className="my-2 flex w-full items-center justify-between">
             {projectName}
 
             <div className="relative flex items-center justify-center">
-              <span className="h-[0.75px] w-4 rotate-0 bg-dynamic-black transition duration-1000" />
-              <span className="absolute h-4 w-[0.75px] rotate-0 bg-dynamic-black transition delay-100 duration-1000" />
+              <span className="bg-dynamic-black h-[0.75px] w-4 rotate-0 transition duration-1000" />
+              <span className="bg-dynamic-black absolute h-4 w-[0.75px] rotate-0 transition delay-100 duration-1000" />
             </div>
           </CursorHover>
         </summary>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { Images } from "@/utils/data";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
@@ -47,7 +47,7 @@ export default function ScreenshotCard({ screenshot }: Props) {
         />
       </motion.div>
 
-      <div className="absolute top-1/2 left-1/2 mx-auto w-11/12 -translate-y-1/2 -translate-x-1/2 overflow-hidden rounded shadow-lg sm:w-4/5 md:fixed md:left-auto md:right-16 md:h-3/5 md:w-auto md:-translate-x-0">
+      <div className="absolute top-1/2 left-1/2 mx-auto w-11/12 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded shadow-lg sm:w-4/5 md:fixed md:right-16 md:left-auto md:h-3/5 md:w-auto md:-translate-x-0">
         <Image
           className="h-full w-full object-cover"
           src={isMedium ? screenshot.devices.mobile : screenshot.devices.desktop}

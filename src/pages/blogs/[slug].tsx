@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import BlogList from "@/components/blogList";
-import HeaderBar from "@/components/headerBar";
+import HeaderBar from "@/components/navigationBar";
 import { Blog, blogs } from "@/utils/data";
 
 export async function getStaticPaths() {
@@ -37,7 +37,7 @@ export default function BlogDetail({ blogDetail }: { blogDetail: Blog }) {
 
       <main className="min-h-screen space-y-20 bg-white pb-10">
         <section>
-          <div className="relative flex h-screen max-h-96 items-center justify-center bg-dynamic-black/50">
+          <div className="bg-dynamic-black/50 relative flex h-screen max-h-96 items-center justify-center">
             <Image src={blogDetail.coverImageUrl} alt="" width="500" height="500" className="h-full w-full object-cover" priority />
 
             <h1 className="absolute text-center text-3xl font-bold text-white md:text-4xl lg:text-5xl">{blogDetail.title}</h1>
@@ -45,7 +45,7 @@ export default function BlogDetail({ blogDetail }: { blogDetail: Blog }) {
         </section>
 
         <section>
-          <div className="prose mx-auto max-w-screen-md p-4 font-charter md:p-0">
+          <div className="prose font-charter mx-auto max-w-screen-md p-4 md:p-0">
             <Markdown>{blogDetail.content}</Markdown>
           </div>
         </section>

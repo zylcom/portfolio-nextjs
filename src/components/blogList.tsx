@@ -7,13 +7,13 @@ export default function BlogList({ blogs }: { blogs: Blog[] }) {
   return (
     <>
       <div className="mb-6 flex items-center justify-center pt-5 md:justify-between">
-        <h2 className="block text-3xl text-piano-black">Latest articles</h2>
+        <h2 className="text-piano-black block text-3xl">Latest articles</h2>
 
         <CursorHover scaleSize={4} className="hidden md:block">
           <ActionButton
             afterContent="after:content-['View_all']"
             text="View all"
-            className="w-full border border-dynamic-black bg-eerie-black py-5 px-10 text-sm uppercase"
+            className="border-dynamic-black bg-eerie-black w-full border px-10 py-5 text-sm uppercase"
             href="/blogs"
           />
         </CursorHover>
@@ -29,7 +29,7 @@ export default function BlogList({ blogs }: { blogs: Blog[] }) {
         <ActionButton
           afterContent="after:content-['View_all']"
           text="View all"
-          className="mt-5 w-full border border-dynamic-black bg-eerie-black py-5 text-sm uppercase"
+          className="border-dynamic-black bg-eerie-black mt-5 w-full border py-5 text-sm uppercase"
           href="/blogs"
         />
       </CursorHover>
