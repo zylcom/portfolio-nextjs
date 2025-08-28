@@ -1,4 +1,4 @@
-import { useSpring } from "framer-motion";
+import { useSpring } from "motion/react";
 import { useEffect } from "react";
 
 export function useMousePosition(

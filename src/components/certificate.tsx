@@ -7,7 +7,9 @@ export default function Certificate() {
 
   return (
     <>
-      <h2 className="text-center text-3xl">My Certificate</h2>
+      <h2 className="text-center text-3xl" id="certificates">
+        My Certificate
+      </h2>
 
       <div className="relative" ref={certificateContainer}>
         {certificates.map((certificate, index) => {

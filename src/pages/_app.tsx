@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import { ReactLenis, useLenis } from "lenis/react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Layout from "@/components/layout";
@@ -27,10 +28,13 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router]);
 
   return (
-    <HoverContext.Provider value={{ hover, setHover }}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </HoverContext.Provider>
+    <>
+      <ReactLenis root />
+      <HoverContext.Provider value={{ hover, setHover }}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </HoverContext.Provider>
+    </>
   );
 }

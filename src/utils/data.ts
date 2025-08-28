@@ -1,3 +1,12 @@
+export type Blog = {
+  title: string;
+  slug: string;
+  content: string;
+  excerpt: string;
+  thumbnail: string;
+  coverImageUrl: string;
+};
+
 export type Images = {
   devices: {
     mobile: string;
@@ -181,4 +190,90 @@ const socials = [
 
 const skills = ["TypeScript", "Node.js", "MySQL", "Tailwindcss", "React.js", "Vue", "Express.js", "GIT"];
 
-export { certificates, projectList, skills, socials };
+const blogs: Blog[] = [
+  {
+    slug: "belajar-dasar-dasar-docker",
+    title: "Belajar Dasar Dasar Docker",
+    thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+    coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/v1701943061/laptop-phone-mockup_io1vtm.jpg",
+    excerpt: "Belajar menggunakan docker...",
+    content: `
+Ini adalah artikel pertama saya, yeay. Artikel ini berisi tentang bagaimana cara menggunakan docker untuk pemula. Tujuan dibuatnya artikel ini adalah sebagai dokumentasi saya dalam belajar menggunakan docker dan saya bisa membacanya kembali jika diperlukan.
+
+## Pengenalan Aplikasi Docker
+
+### Apa itu docker?
+Docker adalah sebuah software yang mempermudah dalam membangun, menjalankan dan deploying aplikasi. Docker menggunakan container untuk membungkus aplikasi dan dependencies menjadi satu unit sehingga mudah untuk berpindah environment. 
+
+### Komponen Docker
+Docker terdiri dari beberapa komponen yang memiliki fungsi yang berbeda-beda.
+
+- Images
+
+  Docker images adalah sebuah template yang berisi dependencies dan environment sebuah aplikasi.
+
+- Containers
+
+  Docker containers adalah sebuah instansi dari sebuah image yang berjalan secara terisolasi tanpa mengganggu aplikasi lain.
+
+- Networks
+- Volumes
+
+### Menginstall Docker di Arch Linux
+Docker bisa di install diberbagai sistem operasi. Namun kali ini saya menggunakan Arch Linux untuk menginstall Docker. Untuk cara instalasi docker di sistem operasi lainnya kalian bisa mengecek di website resmi [docker](https://www.docker.com/). 
+
+Menginstall Docker di Arch Linux sangat mudah sekali, bisa menggunakan package manager bawaan yaitu pacman. Kalian tinggal menjalankan beberapa perintah di terminal.
+
+~~~sh
+sudo pacman -S docker
+~~~
+
+Tunggu sampai proses instalasi selesai. Jika sudah selesai jalankan perintah berikut untuk mengecek apakah docker berhasil di install atau tidak. Jika instalasi berhasil, kalian akan melihat output docker version. Untuk informasi lebih rinci kalian bisa mengunjungi website [Arch wiki](https://wiki.archlinux.org/title/Docker).
+
+~~~sh
+sudo docker info
+~~~
+
+### Menjalankan Docker Daemon
+Untuk menggunakan docker, kalian harus menjalankan docker daemon. Untuk menjalankan docker daemon kalian perlu menjalankan perintah berikut.
+
+~~~sh
+systemctl start docker.service
+~~~
+`,
+  },
+  // {
+  //   slug: "blog-2",
+  //   title: "Blog 2",
+  //   content: "Content 2",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 2 excerpt",
+  // },
+  // {
+  //   slug: "blog-3",
+  //   title: "Blog 3",
+  //   content: "Content 3",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 3 excerpt",
+  // },
+  // {
+  //   slug: "blog-4",
+  //   title: "Blog 4",
+  //   content: "Content 4",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 4 excerpt",
+  // },
+  // {
+  //   slug: "blog-5",
+  //   title: "Blog 5",
+  //   content: "Content 5",
+  //   thumbnail: "https://res.cloudinary.com/dk9bcf16t/image/upload/c_thumb,w_200,g_face/v1720614991/laptop-phone-mockup_io1vtm.webp",
+  //   coverImageUrl: "https://res.cloudinary.com/dk9bcf16t/image/upload/laptop-phone-mockup_io1vtm.webp",
+  //   excerpt: "Content 5 excerpt",
+  // },
+];
+
+export { blogs, certificates, projectList, skills, socials };
