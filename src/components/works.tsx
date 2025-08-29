@@ -4,12 +4,31 @@ import { circOut, motion, useMotionValueEvent, useScroll, useTransform } from "m
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 import CursorHover from "./cursorHover";
 import { MoveRightIcon } from "lucide-react";
+import Image from "next/image";
+import { cn } from "@/utils/utils";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+const brandMetadata = [
+  { className: "", src: "/upmedia-logo.png", alt: "UPMedia Logo" },
+  { className: "rotate-90", src: "/ku-invitation-logo.png", alt: "Ku-Invitation Logo" },
+  { className: "rotate-90", src: "/upmedia-logo.png", alt: "UPMedia Logo" },
+];
+
+gsap.registerPlugin(useGSAP);
 
 export default function Works() {
   const workContainer = useRef<HTMLDivElement>(null);
   const workContainer1 = useRef<HTMLDivElement>(null);
   const workContainer2 = useRef<HTMLDivElement>(null);
   const [dynamicOffset, setDynamicOffset] = useState(590);
+  const brandLogoRefs = useRef<HTMLImageElement[]>([]);
+
+  const setItemRef = (element: HTMLImageElement | null, key: number) => {
+    if (element) {
+      brandLogoRefs.current[key] = element;
+    }
+  };
 
   const { scrollYProgress: scrollYProgress1 } = useScroll({
     target: workContainer1,
@@ -22,15 +41,42 @@ export default function Works() {
   const workContainer1Height = useTransform(scrollYProgress1, [0, 1], [89, dynamicOffset - 89 * 3]);
   const workContainer2Height = useTransform(scrollYProgress2, [0.01, 1], [89, dynamicOffset - 89 * 3]);
 
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      repeat: -1,
+    });
+
+    tl.to(brandLogoRefs.current[0], { rotate: "-90", delay: 3 }, 0)
+      .to(brandLogoRefs.current[1], { rotate: "0", delay: 3 }, 0)
+      .to(brandLogoRefs.current[1], { rotate: "-90", delay: 3 }, 3)
+      .to(brandLogoRefs.current[2], { rotate: "0", delay: 3 }, 3);
+  });
+
   useEffect(() => {
     setDynamicOffset(window.innerHeight);
   }, []);
 
   return (
-    <section className="py-20" id="works">
+    <section className="py-20" id="work">
       <div className="px-3.5 lg:px-14 2xl:px-24">
         <h2 className="font-figtree mb-4 font-bold uppercase">Selected Works</h2>
-        <h3 className="font-figtree text-8xl font-bold">Creating impact for</h3>
+        <div className="font-figtree flex flex-wrap gap-6 text-7xl font-bold md:text-8xl">
+          Creating impact for
+          <div className="bg-rainstorm relative flex w-fit flex-col flex-wrap items-center justify-center overflow-hidden rounded-lg px-6 py-2">
+            <Image className="h-16 w-auto opacity-0" src="/upmedia-logo.png" alt="" width={1} height={64} />
+            {brandMetadata.map((metadata, index) => (
+              <Image
+                key={index}
+                className={cn("absolute h-16 w-auto origin-[-55px_-25px]", metadata.className)}
+                src={metadata.src}
+                alt={metadata.alt}
+                ref={(el) => setItemRef(el, index)}
+                width={576}
+                height={208}
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="bg-rainstorm">
@@ -88,10 +134,12 @@ export default function Works() {
             <Dialog>
               <DialogTrigger className="order-1 mb-2 h-fit md:order-2">
                 <CursorHover scaleSize={7}>
-                  <img
+                  <Image
                     className="aspect-video h-full cursor-pointer rounded-2xl object-cover object-center"
                     src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1755937003/upmedia-mock_fudrbo.png"
                     alt="UPMedia"
+                    width={1366}
+                    height={768}
                   />
                 </CursorHover>
               </DialogTrigger>
@@ -99,10 +147,12 @@ export default function Works() {
                 <DialogHeader>
                   <DialogTitle>UPMedia</DialogTitle>
                 </DialogHeader>
-                <img
+                <Image
                   className="aspect-video h-full w-full rounded object-cover object-center shadow"
                   src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1755937003/upmedia-mock_fudrbo.png"
                   alt="UPMedia"
+                  width={1366}
+                  height={768}
                 />
               </DialogContent>
             </Dialog>
@@ -162,10 +212,12 @@ export default function Works() {
               <Dialog>
                 <DialogTrigger className="order-1 mb-2 h-fit md:order-2">
                   <CursorHover scaleSize={7}>
-                    <img
+                    <Image
                       className="aspect-video h-full cursor-pointer rounded-2xl object-cover object-center"
                       src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1756024295/kuinvitation_czu6ch.png"
                       alt="Ku-Invitation"
+                      width={1366}
+                      height={768}
                     />
                   </CursorHover>
                 </DialogTrigger>
@@ -173,10 +225,12 @@ export default function Works() {
                   <DialogHeader>
                     <DialogTitle>Ku-Invitation</DialogTitle>
                   </DialogHeader>
-                  <img
+                  <Image
                     className="aspect-video h-full w-full rounded object-cover object-center shadow"
                     src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1756024295/kuinvitation_czu6ch.png"
                     alt="Ku-Invitation"
+                    width={1366}
+                    height={768}
                   />
                 </DialogContent>
               </Dialog>
@@ -230,10 +284,12 @@ export default function Works() {
               <Dialog>
                 <DialogTrigger className="order-1 mb-2 h-fit md:order-2">
                   <CursorHover scaleSize={7}>
-                    <img
+                    <Image
                       className="aspect-video h-full cursor-pointer rounded-2xl object-cover object-center"
                       src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt="Ku-Invitation"
+                      alt="UPMedia"
+                      width={1366}
+                      height={768}
                     />
                   </CursorHover>
                 </DialogTrigger>
@@ -241,17 +297,19 @@ export default function Works() {
                   <DialogHeader>
                     <DialogTitle>UPMedia</DialogTitle>
                   </DialogHeader>
-                  <img
+                  <Image
                     className="aspect-video h-full w-full rounded object-cover object-center shadow"
                     src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Ku-Invitation"
+                    alt="UPMedia"
+                    width={1366}
+                    height={768}
                   />
                 </DialogContent>
               </Dialog>
             </div>
           </motion.div>
           <motion.div className="bg-rainstorm border-t-dire-wolf/50 sticky top-0 min-h-[calc(100vh_-_(89px_*_3))] border-t px-3.5 py-6 lg:px-14 2xl:px-24">
-            <h3 className="text-lighthouse col-span-2 mb-8 text-4xl font-bold">Strategy</h3>
+            <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">Strategy</h3>
             <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
               <div className="order-2 md:order-1">
                 <p className="text-lighthouse mb-4 max-w-2xl text-sm lg:text-xl">
@@ -291,13 +349,16 @@ export default function Works() {
                   Learn more <MoveRightIcon />
                 </button>
               </div>
+
               <Dialog>
                 <DialogTrigger className="order-1 mb-2 h-fit md:order-2">
                   <CursorHover scaleSize={7}>
-                    <img
+                    <Image
                       className="aspect-video h-full cursor-pointer rounded-2xl object-cover object-center"
                       src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Ku-Invitation"
+                      width={1366}
+                      height={768}
                     />
                   </CursorHover>
                 </DialogTrigger>
@@ -305,10 +366,12 @@ export default function Works() {
                   <DialogHeader>
                     <DialogTitle>UPMedia</DialogTitle>
                   </DialogHeader>
-                  <img
+                  <Image
                     className="aspect-video h-full w-full rounded object-cover object-center shadow"
                     src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Ku-Invitation"
+                    width={1366}
+                    height={768}
                   />
                 </DialogContent>
               </Dialog>

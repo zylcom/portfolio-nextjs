@@ -188,7 +188,21 @@ const socials = [
   { socialName: "Instagram", link: "#" },
 ];
 
-const skills = ["TypeScript", "Node.js", "MySQL", "Tailwindcss", "React.js", "Vue", "Express.js", "GIT"];
+const skills = [
+  "TypeScript",
+  "Node.js",
+  "MySQL",
+  "Tailwindcss",
+  "Bootstrap",
+  "jQuery",
+  "React.js",
+  "Vue",
+  "Express.js",
+  "Git",
+  "Laravel",
+  "CodeIgniter",
+  "Docker",
+];
 
 const blogs: Blog[] = [
   {

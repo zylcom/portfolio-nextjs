@@ -1,14 +1,10 @@
 import Image from "next/image";
-import ActionButton from "./actionButton";
-import { motion, useAnimationFrame, useTime, useTransform } from "motion/react";
-import { socials } from "@/utils/data";
-import CursorHover from "./cursorHover";
-import { useEffect, useRef } from "react";
+import { motion } from "motion/react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { cn } from "@/lib/utils";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useDimensions } from "@/hooks/useDimensions";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -222,7 +218,7 @@ export default function HeroSection() {
 
   return (
     <div
-      className="text-lighthouse font-figtree hero-wrapper bg-rainstorm hero-wrapper h-auto overflow-hidden px-3.5 pt-36 sm:pb-40 lg:px-14 lg:pt-52 2xl:px-24"
+      className="text-lighthouse font-figtree hero-wrapper bg-rainstorm hero-wrapper h-auto overflow-hidden px-3.5 pt-52 sm:pb-40 lg:px-14 2xl:px-24"
       ref={heroWrapper}
     >
       <div className="m-auto flex max-w-[calc(var(--spacing)*495)] flex-col lg:flex-row">
@@ -271,7 +267,7 @@ export default function HeroSection() {
         </div>
         <div className="relative flex min-h-96 w-full justify-evenly md:min-h-[36rem] lg:min-w-[38rem]" ref={imageWrapper}>
           {imagesMetadata.map((metadata, index) => (
-            <img
+            <Image
               key={index}
               className={cn(
                 "absolute h-80 max-h-[36rem] w-52 max-w-80 rounded-3xl object-cover object-center blur-xs after:content-[''] sm:h-[30rem] sm:w-[16.5rem] lg:h-[44rem] lg:max-h-[44rem] lg:w-[26rem] lg:max-w-[26rem]",
@@ -280,6 +276,9 @@ export default function HeroSection() {
               src={metadata.src}
               alt={metadata.alt}
               ref={(el) => setItemRef(el, index)}
+              width={576}
+              height={208}
+              priority
             />
           ))}
         </div>
