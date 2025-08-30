@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="bg-zhen-zhu-bai-pearl overflow-hidden">
+      <body className="bg-zhen-zhu-bai-pearl">
         <Main />
         <NextScript />
       </body>
