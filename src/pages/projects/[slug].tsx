@@ -49,7 +49,7 @@ export default function Projects({ project }: { project: Project }) {
         <HeaderBar />
       </header>
 
-      <main className="bg-white px-4">
+      <main className="bg-white px-4 pt-52">
         <motion.span className="block text-xs italic" variants={staggerAnimation} initial="initial" animate="visible">
           {project.workScopes}
         </motion.span>

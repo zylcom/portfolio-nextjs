@@ -107,6 +107,9 @@ export default function Works() {
                 <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
                   TailwindCSS
                 </Badge>
+                <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
+                  jQuery
+                </Badge>
                 <Badge className="text-lighthouse font-figtree rounded-full px-3 py-1 text-sm font-normal" variant="outline">
                   MySQL
                 </Badge>
@@ -131,6 +134,7 @@ export default function Works() {
                 </a>
               </CursorHover>
             </div>
+
             <Dialog>
               <DialogTrigger className="order-1 mb-2 h-fit md:order-2">
                 <CursorHover scaleSize={7}>
@@ -209,6 +213,7 @@ export default function Works() {
                   </a>
                 </CursorHover>
               </div>
+
               <Dialog>
                 <DialogTrigger className="order-1 mb-2 h-fit md:order-2">
                   <CursorHover scaleSize={7}>
@@ -241,12 +246,12 @@ export default function Works() {
             ref={workContainer2}
             style={{ height: workContainer2Height }}
           >
-            <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">Strategy</h3>
+            <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">UPMedia - PT Dirandra Satu Media</h3>
             <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
               <div className="order-2 md:order-1">
                 <p className="text-lighthouse mb-4 max-w-2xl text-sm lg:text-xl">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam nisi, ratione suscipit voluptatum necessitatibus, facilis dolor voluptate
-                  laborum, dolore dolorum officiis?
+                  Your all-in-one streaming companion for endless entertainment! Enjoy local and international movies, binge-worthy series, live TV channels,
+                  and even radio — all in one easy-to-use platform.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="text-lighthouse font-figtree rounded-full px-3 py-1 text-sm font-normal" variant="outline">
@@ -264,6 +269,12 @@ export default function Works() {
                   <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
                     Laravel
                   </Badge>
+                  <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
+                    TailwindCSS
+                  </Badge>
+                  <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
+                    jQuery
+                  </Badge>
                   <Badge className="text-lighthouse font-figtree rounded-full px-3 py-1 text-sm font-normal" variant="outline">
                     MySQL
                   </Badge>
@@ -274,19 +285,27 @@ export default function Works() {
                     Git
                   </Badge>
                   <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
-                    TailwindCSS
+                    RESTful API
                   </Badge>
                 </div>
-                <button className="mt-14 hidden w-fit cursor-pointer items-center gap-x-2 rounded-md bg-red-100 p-3 font-bold md:flex">
-                  Learn more <MoveRightIcon />
-                </button>
+                <CursorHover scaleSize={6}>
+                  <a
+                    href="https://upmedia.co.id"
+                    className="mt-14 hidden w-fit cursor-pointer items-center gap-x-2 rounded-md bg-red-100 p-3 font-bold md:flex"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit site <MoveRightIcon />
+                  </a>
+                </CursorHover>
               </div>
+
               <Dialog>
                 <DialogTrigger className="order-1 mb-2 h-fit md:order-2">
                   <CursorHover scaleSize={7}>
                     <Image
                       className="aspect-video h-full cursor-pointer rounded-2xl object-cover object-center"
-                      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1755937003/upmedia-mock_fudrbo.png"
                       alt="UPMedia"
                       width={1366}
                       height={768}
@@ -299,7 +318,7 @@ export default function Works() {
                   </DialogHeader>
                   <Image
                     className="aspect-video h-full w-full rounded object-cover object-center shadow"
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1755937003/upmedia-mock_fudrbo.png"
                     alt="UPMedia"
                     width={1366}
                     height={768}
@@ -309,12 +328,12 @@ export default function Works() {
             </div>
           </motion.div>
           <motion.div className="bg-rainstorm border-t-dire-wolf/50 sticky top-0 min-h-[calc(100vh_-_(89px_*_3))] border-t px-3.5 py-6 lg:px-14 2xl:px-24">
-            <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">Strategy</h3>
+            <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">Ku-Invitation - Freelancer</h3>
             <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
               <div className="order-2 md:order-1">
                 <p className="text-lighthouse mb-4 max-w-2xl text-sm lg:text-xl">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam nisi, ratione suscipit voluptatum necessitatibus, facilis dolor voluptate
-                  laborum, dolore dolorum officiis?
+                  A modern digital wedding invitation platform that helps you create beautiful, premium-quality invitations. Share your personalized link
+                  instantly with all your WhatsApp contacts, making it easier than ever to impress your guests and make your special day unforgettable.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="text-lighthouse font-figtree rounded-full px-3 py-1 text-sm font-normal" variant="outline">
@@ -327,27 +346,31 @@ export default function Works() {
                     Back-end Developer
                   </Badge>
                   <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
-                    Vue
+                    CodeIgniter
                   </Badge>
                   <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
-                    Laravel
+                    Bootstrap
+                  </Badge>
+                  <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
+                    jQuery
                   </Badge>
                   <Badge className="text-lighthouse font-figtree rounded-full px-3 py-1 text-sm font-normal" variant="outline">
                     MySQL
                   </Badge>
                   <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
-                    Figma
-                  </Badge>
-                  <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
                     Git
                   </Badge>
-                  <Badge className="font-figtree text-lighthouse rounded-full px-3 py-1 text-sm font-normal" variant="outline">
-                    TailwindCSS
-                  </Badge>
                 </div>
-                <button className="mt-14 hidden w-fit cursor-pointer items-center gap-x-2 rounded-md bg-red-100 p-3 font-bold md:flex">
-                  Learn more <MoveRightIcon />
-                </button>
+                <CursorHover scaleSize={6}>
+                  <a
+                    href="https://system.ku-invitation.com"
+                    className="mt-14 hidden w-fit cursor-pointer items-center gap-x-2 rounded-md bg-red-100 p-3 font-bold md:flex"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit site <MoveRightIcon />
+                  </a>
+                </CursorHover>
               </div>
 
               <Dialog>
@@ -355,7 +378,7 @@ export default function Works() {
                   <CursorHover scaleSize={7}>
                     <Image
                       className="aspect-video h-full cursor-pointer rounded-2xl object-cover object-center"
-                      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1756024295/kuinvitation_czu6ch.png"
                       alt="Ku-Invitation"
                       width={1366}
                       height={768}
@@ -364,11 +387,11 @@ export default function Works() {
                 </DialogTrigger>
                 <DialogContent className="lg:max-w-6xl">
                   <DialogHeader>
-                    <DialogTitle>UPMedia</DialogTitle>
+                    <DialogTitle>Ku-Invitation</DialogTitle>
                   </DialogHeader>
                   <Image
                     className="aspect-video h-full w-full rounded object-cover object-center shadow"
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://res.cloudinary.com/dk9bcf16t/image/upload/v1756024295/kuinvitation_czu6ch.png"
                     alt="Ku-Invitation"
                     width={1366}
                     height={768}
