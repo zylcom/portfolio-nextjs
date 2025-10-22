@@ -81,6 +81,8 @@ export default function NavigationBar() {
       document.body.style.overflow = "hidden";
     } else {
       setCursorHoverMessage("menu");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
     }
   }, [showMenu]);
 
