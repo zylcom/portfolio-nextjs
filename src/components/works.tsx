@@ -30,16 +30,16 @@ export default function Works() {
     }
   };
 
-  const { scrollYProgress: scrollYProgress1 } = useScroll({
-    target: workContainer1,
-    offset: [`start ${dynamicOffset - 90 * 3}px`, `start ${89}px`],
-  });
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    target: workContainer2,
-    offset: [`start ${dynamicOffset - 90 * 2}px`, `start ${89 * 2}px`],
-  });
-  const workContainer1Height = useTransform(scrollYProgress1, [0, 1], [89, dynamicOffset - 89 * 3]);
-  const workContainer2Height = useTransform(scrollYProgress2, [0.01, 1], [89, dynamicOffset - 89 * 3]);
+  // const { scrollYProgress: scrollYProgress1 } = useScroll({
+  //   target: workContainer1,
+  //   offset: [`start ${dynamicOffset - 90 * 3}px`, `start ${89}px`],
+  // });
+  // const { scrollYProgress: scrollYProgress2 } = useScroll({
+  //   target: workContainer2,
+  //   offset: [`start ${dynamicOffset - 90 * 2}px`, `start ${89 * 2}px`],
+  // });
+  // const workContainer1Height = useTransform(scrollYProgress1, [0, 1], [89, dynamicOffset - 89 * 3]);
+  // const workContainer2Height = useTransform(scrollYProgress2, [0.01, 1], [89, dynamicOffset - 89 * 3]);
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -52,9 +52,9 @@ export default function Works() {
       .to(brandLogoRefs.current[2], { rotate: "0", delay: 3 }, 3);
   });
 
-  useEffect(() => {
-    setDynamicOffset(window.innerHeight);
-  }, []);
+  // useEffect(() => {
+  //   setDynamicOffset(window.innerHeight);
+  // }, []);
 
   return (
     <section className="py-20" id="work">
@@ -80,7 +80,7 @@ export default function Works() {
       </div>
 
       <div className="bg-rainstorm">
-        <div className="bg-rainstorm sticky top-0 mt-20 h-[calc(100vh_-_(89px_*_3))] px-3.5 py-6 lg:px-14 2xl:px-24" ref={workContainer}>
+        <div className="bg-rainstorm sticky top-0 mt-20 px-3.5 py-6 lg:px-14 2xl:px-24">
           <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">UPMedia - PT Dirandra Satu Media</h3>
           <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
             <div className="order-2 md:order-1">
@@ -164,11 +164,7 @@ export default function Works() {
         </div>
 
         <div className="min-h-screen">
-          <motion.div
-            className="bg-rainstorm border-t-dire-wolf/50 sticky top-[89px] h-[89px] border-t px-3.5 pt-6 lg:px-14 2xl:px-24"
-            ref={workContainer1}
-            style={{ height: workContainer1Height }}
-          >
+          <motion.div className="bg-rainstorm border-t-dire-wolf/50 sticky top-[89px] border-t px-3.5 pt-6 lg:px-14 2xl:px-24">
             <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">Ku-Invitation - Freelancer</h3>
             <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
               <div className="order-2 md:order-1">
@@ -241,11 +237,7 @@ export default function Works() {
               </Dialog>
             </div>
           </motion.div>
-          <motion.div
-            className="bg-rainstorm border-t-dire-wolf/50 sticky top-[calc(89px_*_2)] h-[89px] border-t px-3.5 pt-6 lg:px-14 2xl:px-24"
-            ref={workContainer2}
-            style={{ height: workContainer2Height }}
-          >
+          <motion.div className="bg-rainstorm border-t-dire-wolf/50 sticky top-[calc(89px*2)] border-t px-3.5 pt-6 lg:px-14 2xl:px-24">
             <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">UPMedia - PT Dirandra Satu Media</h3>
             <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
               <div className="order-2 md:order-1">
@@ -327,7 +319,7 @@ export default function Works() {
               </Dialog>
             </div>
           </motion.div>
-          <motion.div className="bg-rainstorm border-t-dire-wolf/50 sticky top-0 min-h-[calc(100vh_-_(89px_*_3))] border-t px-3.5 py-6 lg:px-14 2xl:px-24">
+          <motion.div className="bg-rainstorm border-t-dire-wolf/50 sticky top-0 border-t px-3.5 py-6 lg:px-14 2xl:px-24">
             <h3 className="text-lighthouse mb-8 text-2xl font-bold md:text-4xl">Ku-Invitation - Freelancer</h3>
             <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
               <div className="order-2 md:order-1">
