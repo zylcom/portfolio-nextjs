@@ -16,7 +16,7 @@ export default function Document() {
         />
         {/* End Google Tag Manager */}
       </Head>
-      <body>
+      <body className="bg-zhen-zhu-bai-pearl">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -27,7 +27,6 @@ export default function Document() {
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-      <body className="bg-zhen-zhu-bai-pearl">
         <Main />
         <NextScript />
       </body>
